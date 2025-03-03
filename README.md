@@ -85,6 +85,10 @@ The **Freelance Teacher Marketplace** is a web-based platform that connects **fr
 - AI-based recommendation system (OpenAI / TensorFlow)
 
 ---
+## Future Enhancements
+- AI-powered live tutoring.
+- More payment options (PayPal, Crypto).
+- Mobile app version.
 
 ## **📜 License**
 This project is **open-source** and can be modified or expanded upon. Feel free to contribute!  
