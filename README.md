@@ -2,6 +2,7 @@
 
 📌 Project Title
 
+
 Freelance Teacher Marketplace - Connecting Students with Affordable Educators
 
 🎯 Project Idea & Description
@@ -71,6 +72,7 @@ AI-based recommendation system (OpenAI / TensorFlow)
 This project is open-source and can be modified or expanded upon. Feel free to contribute!
 
 📌 How to Contribute?
+
 
 Fork the Repository
 
