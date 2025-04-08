@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "freelance_teacher_auth",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

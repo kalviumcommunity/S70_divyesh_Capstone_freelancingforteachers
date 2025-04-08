@@ -72,6 +72,7 @@ This project is open-source and can be modified or expanded upon. Feel free to c
 
 📌 How to Contribute?
 
+
 Fork the Repository
 
 Clone it Locally
