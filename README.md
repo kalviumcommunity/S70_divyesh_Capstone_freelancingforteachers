@@ -5,7 +5,7 @@
 
 Freelance Teacher Marketplace - Connecting Students with Affordable Educators
 
-🎯 Project Idea & Description
+🎯 Project Idea & Description..
 
 The Freelance Teacher Marketplace is a web-based platform that connects freelance teachers with students looking for affordable, high-quality education.
 
