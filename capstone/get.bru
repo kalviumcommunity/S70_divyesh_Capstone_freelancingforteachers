@@ -4,8 +4,15 @@ meta {
   seq: 1
 }
 
-get {
-  url: http://localhost:5000
-  body: none
+put {
+  url: http://localhost:5000/api/users/6650a12345abc67890def111
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "name": "Updated Alice",
+    "role": "teacher"
+  }
 }
