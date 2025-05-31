@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
 
-// Load environment variables
+// Load environment variables from .env
 dotenv.config();
 
 // Connect to MongoDB
@@ -11,21 +11,26 @@ connectDB();
 
 const app = express();
 
-// Middleware
+// Middlewares
 app.use(cors());
-app.use(express.json()); // for parsing application/json
+app.use(express.json()); // To parse JSON bodies
 
 // Routes
 const userRoutes = require("./routes/user");
-app.use("/api/users", userRoutes);
+const courseRoutes = require("./routes/course");
 
-// Root route
+app.use("/api/users", userRoutes);
+app.use("/api/courses", courseRoutes);
+
+
+
+// Default route
 app.get("/", (req, res) => {
-  res.send("Backend API is running 🚀");
+  res.send("Freelance Teacher Marketplace API is running 🚀");
 });
 
-// Start the server
+// Server Port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(` Server running on http://localhost:${PORT}`);
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });
