@@ -2,17 +2,17 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 
-// GET all users
+//  GET - fetch all users
 router.get("/", async (req, res) => {
   try {
-    const users = await User.find(); // fetch all users
+    const users = await User.find(); // Read from DB
     res.json(users);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-// POST - Create a new user
+//  POST - create a new user
 router.post("/", async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
@@ -23,22 +23,21 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
-    // Create new user
     const newUser = new User({ name, email, password, role });
-    const savedUser = await newUser.save();
+    const savedUser = await newUser.save(); // Write to DB
     res.status(201).json(savedUser);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(400).json({ error: err.message });
   }
 });
 
-// PUT - Update user by ID
+//  PUT - update a user by ID
 router.put("/:id", async (req, res) => {
   try {
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
-      req.body,
-      { new: true } // return the updated document
+      req.body, // Fields to update
+      { new: true } // Return updated user
     );
 
     if (!updatedUser) {
@@ -50,7 +49,5 @@ router.put("/:id", async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 });
-
-
 
 module.exports = router;
