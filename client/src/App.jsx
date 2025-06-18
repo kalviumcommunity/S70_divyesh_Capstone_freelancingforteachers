@@ -6,7 +6,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import LoginForm from './components/LoginForm';
-import SignupForm from './components/SignupForm';
+import SignupForm from './components/SignupForm'
+
+
 
 // Optional: You can import more components like TeacherDashboard, StudentDashboard etc.
 
