@@ -26,4 +26,25 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Update a course
+router.put('/:id', async (req, res) => {
+  try {
+    const updated = await Course.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(updated);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// Delete a course
+router.delete('/:id', async (req, res) => {
+  try {
+    await Course.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Course deleted' });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+
 module.exports = router;
